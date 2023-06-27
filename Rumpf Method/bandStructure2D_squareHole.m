@@ -23,8 +23,8 @@ a2_ = [0; 1; 0];
 Lx = norm(a1_);
 Ly = norm(a2_);
 
-P = 7;
-Q = 7;
+P = 13;
+Q = 13;
 NH = P*Q; % total number of harmonics
 
 N = 200;        % The number of bloch vectors to calculate between points in reciprocal space.
@@ -159,7 +159,7 @@ KYs = squeeze(KXYs(2,:,:));
 KXs = sparse(KXs(:));
 KYs = sparse(KYs(:));
 
-for i = 1:numPoints*N
+parfor i = 1:numPoints*N
     % get components of beta
     bx = beta_xs(i);
     by = beta_ys(i);
@@ -280,7 +280,7 @@ for t = (1:NH)
 end
 
 axis([-0.01,dists(end)+0.01,0,0.8])
-%title(['Band Structure of Infinite Square Crystal, ', num2str(P), ' Harmonics']);
+title(['Band Structure of Infinite Square Crystal, ', num2str(P), ' Harmonics']);
 xlabel('Bloch Wave Vector, \beta');
 ylabel('Normalised Frequency');
 

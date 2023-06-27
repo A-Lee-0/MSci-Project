@@ -190,7 +190,7 @@ KYs = squeeze(KXYs(2,:,:));
 KXs = sparse(KXs(:));
 KYs = sparse(KYs(:));
 
-for i = 1:numPoints*N
+parfor i = 1:numPoints*N
     % get components of beta
     bx = beta_xs(i);
     by = beta_ys(i);
