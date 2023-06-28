@@ -32,10 +32,12 @@ I became fascinated by a quirk when computing the band structure of non-primitiv
 When computing the band structure for such unit cells, mysterious non-physical bands appear in the band structure, and I began to focus on understanding how, and what these mystery bands were.
 The result was that I was able to extend the conventional rectangular PWEM in a couple of ways.
 
-1. I found an implemented a hexagonal FFT algorithm, and restructured the calculations around it to permit the calculation of the band structure for a Hexagonal unit cell.
+1. I found and implemented a hexagonal FFT algorithm, and restructured the calculations around it to permit the calculation of the band structure for a Hexagonal unit cell.
+An example of this can be found in the [Hexagonal FFT](/Hexagonal%20FFT) directory.
 
 2. I figured out how to identify the mystery bands in the band structure, and separate them from the physically viable bands.
 This allows for near arbitrary primitive unit cells to be calculated, albeit at a cost in memory and compute time over a primitive unit cell.
+A couple of examples of this can be found in the [Rumpf Method](/Rumpf%20Method) directory
 
 Unfortunately, I do not have all of the scripts cleaned up and updated to work with MATLAB R2023a.
-I will endeavour to continue moupdating scripts, and updating this repository into the future!
+I will endeavour to continue updating scripts, and pushing them to this repository into the future!
